@@ -1,0 +1,18 @@
+
+function genPostReqWithRefreshToken(url, body, refreshToken) {
+  const request = new Request(url, {
+    method: "POST",
+    mode: "cors",
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${refreshToken}`,
+    },
+    body: body,
+  });
+
+  return request;
+}
+
+
+export default genPostReqWithRefreshToken;
