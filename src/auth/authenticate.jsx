@@ -15,12 +15,14 @@ async function authenticate({refreshToken, updateLoggedIn, updateAccountName, up
       updateRole(body.role);
       updateEmail(body.email);
     }else if (response.status === 401) {
-      window.alert("please login")
+      console.log("not logged in")
+      //window.alert("please login")
     }else if (response.status ===500){
-      window.alert("Something wrong. Please try again.");
+      window.alert("Internal server error. Please try later.");
     }
     
   }catch (err) {
+    window.alert("Connection error. Please try again.");
     console.log(err);
   }
 }

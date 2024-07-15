@@ -307,7 +307,7 @@ body {
   height: 40px;
   border-bottom: var(--clr-comp-border) 2px solid;
 }
-.display-name-container, .email-container {
+.display-name-container, .email-container ,.password-container{
   padding-top: 15px;
   height: 120px;
   border-bottom: var(--clr-comp-border) 2px solid;
@@ -328,7 +328,6 @@ body {
   font-size: 16px;
   font-weight: 500;
   margin-right: 10px;
-  border: none;
   width: 90px;
   height: 30px;
   text-align: center;
@@ -365,6 +364,13 @@ body {
 }
 .email-change-input {
   font-size: 18px;
+}
+.password-change-btn {
+  font-size: 16px;
+  font-weight: 500;
+  height: 30px;
+  align-content: center;
+  text-align: center;
 }
 .close-setting-btn {
   width: fit-content;

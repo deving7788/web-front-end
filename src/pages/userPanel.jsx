@@ -161,6 +161,9 @@ function UserPanel() {
               <div className={changeEmail ? "email-change-cancel-btn btn" : "email-change-btn hidden btn"} onClick={cancelEmailChange}>Cancel</div>
             </form>
           </div>
+          <div className="password-container">
+            <div className="password-change-btn btn">Change password</div>
+          </div>
         </section>
         <section className="user-setting-btns-container">
           <span className="btn close-setting-btn" onClick={handleCloseSetting}>close</span>
