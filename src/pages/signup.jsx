@@ -21,7 +21,7 @@ function Signup() {
 
   const [state, dispatch] = useReducer(signupReducer, signupInitial);
   const {accountName, displayName, email, createPassword, confirmPassword, accountNameProm, displayNameProm, emailProm, createPasswordProm, confirmPasswordProm} = state;
-  const {updateLoggedIn, updateAccountName, updateDisplayName, updateRole, updateEmail} = useMainContext();
+  const {updateLoggedIn, updateEmailConfirmed, updateAccountName, updateDisplayName, updateRole, updateEmail} = useMainContext();
 
   function handleChange(e) {
     if(e.target.name === "accountName")
@@ -83,6 +83,7 @@ function Signup() {
         updateDisplayName(body.displayName);
         updateRole(body.role);
         updateEmail(body.email);
+        updateEmailConfirmed(body.emailConfirmed);
 
         return redirectTo("/user-panel");
       }else if(response.status === 400) {

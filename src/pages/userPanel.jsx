@@ -132,7 +132,7 @@ function UserPanel() {
         <div>middle</div>
         <div>middle</div>
       </div>
-      <aside className={settingVisibility ? "user-panel-right" : "user-panel-right hidden"}>
+      <aside className={settingVisibility ? "user-setting" : "user-setting hidden"}>
         <section className="user-setting-content-container">
           <div className="account-name-container">
             <span className="account-name-text">Account name: {accountName}</span>
@@ -163,6 +163,18 @@ function UserPanel() {
           </div>
           <div className="password-container">
             <div className="password-change-btn btn">Change password</div>
+            <form className="password-change-form">
+              <label className="password-change-prompt">1111</label>
+              <div className="password-change-items-container">
+                <div className="password-change-item"><label htmlFor="password-change-input-current" className="password-change-label">Current password</label><input className="password-change-input" id="password-change-input-current" name="password-change-input-current"/></div>
+                <div className="password-change-item"><label htmlFor="password-change-input-old" className="password-change-label">New password</label><input className="password-change-input" id="password-change-input-old" name="password-change-input-old"/></div>
+                <div className="password-change-item"><label htmlFor="password-change-input-confirm" className="password-change-label">Confirm password</label><input className="password-change-input" id="password-change-input-confirm" name="password-change-input-confirm"  /></div>
+              </div>
+              <div className="password-change-btns-container">
+                <input className="password-change-confirm-btn btn" type="submit" value="Confirm"/>
+                <input className="password-change-cancel-btn btn" type="submit" value="Cancel"/>
+              </div>
+            </form>
           </div>
         </section>
         <section className="user-setting-btns-container">
