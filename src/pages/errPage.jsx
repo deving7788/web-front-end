@@ -1,5 +1,11 @@
+import {Link} from "../router.jsx";
 function ErrPage(){
-    return <div className="error-page">There is no such page. Please try something else.</div>
+    return <div className="error-page">
+             <div className="error-page-content">
+               <div className="error-page-message">This page does not exist.</div>
+               <div className="error-page-link router-link"><Link to="/">Home page</Link></div>
+             </div>
+           </div>
 }
 
 export default ErrPage

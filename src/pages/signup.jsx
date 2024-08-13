@@ -4,6 +4,7 @@ import {accNameValidConst, disNameValidConst, passValidConst, emailValidConst, v
 import {signupReducer} from "../reducers";
 import {redirectTo} from "../router.jsx";
 import {useMainContext} from "../context/mainContext.jsx";
+import {gohost} from "../assets/data.jsx";
 
 function Signup() {
   const signupInitial = {
@@ -21,7 +22,7 @@ function Signup() {
 
   const [state, dispatch] = useReducer(signupReducer, signupInitial);
   const {accountName, displayName, email, createPassword, confirmPassword, accountNameProm, displayNameProm, emailProm, createPasswordProm, confirmPasswordProm} = state;
-  const {updateLoggedIn, updateEmailConfirmed, updateAccountName, updateDisplayName, updateRole, updateEmail} = useMainContext();
+  const {updateLoggedIn, updateEmailVerified, updateAccountName, updateDisplayName, updateRole, updateEmail} = useMainContext();
 
   function handleChange(e) {
     if(e.target.name === "accountName")
@@ -68,14 +69,15 @@ function Signup() {
 
     const bodyObj = {accountName, displayName, email, password: createPassword, role: "user"};
     const bodyJson = JSON.stringify(bodyObj);
-    const signupRequest = genPostReq("http://localhost:8080/api/user/signup", bodyJson);
+    const signupRequest = genPostReq(`${gohost}/api/user/signup`, bodyJson);
 
     try {
       const response = await fetch(signupRequest);
-      if(response.ok){
+      if (response.ok){
         updateLoggedIn(true);
         const body = await response.json();
-        if("refreshToken" in body) {
+        console.log("body is ", body)
+        if ("refreshToken" in body) {
           localStorage.setItem("refreshToken", body.refreshToken)
         }
 
@@ -83,7 +85,7 @@ function Signup() {
         updateDisplayName(body.displayName);
         updateRole(body.role);
         updateEmail(body.email);
-        updateEmailConfirmed(body.emailConfirmed);
+        updateEmailVerified(body.emailVerified);
 
         return redirectTo("/user-panel");
       }else if(response.status === 400) {
@@ -97,7 +99,8 @@ function Signup() {
         if ("emailProm" in body) {
           dispatch({type:"RESET_EMAIL_PROM", payload: body.emailProm})
         }
-        return null;
+      }else if (response.status === 501) {
+        window.alert("Wellcome. Please log in with your account name.");
       }else {
         window.alert("Internal server error, please try later");
       }

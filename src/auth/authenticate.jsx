@@ -1,7 +1,8 @@
 import {genGetReqWithRefreshToken} from "../utils";
+import {gohost} from "../assets/data.jsx";
 
-async function authenticate({refreshToken, updateLoggedIn, updateAccountName, updateDisplayName, updateRole, updateEmail}) {
-  const request = genGetReqWithRefreshToken("http://localhost:8080/api/user/panel", refreshToken);
+async function authenticate({refreshToken, updateLoggedIn, updateAccountName, updateDisplayName, updateRole, updateEmail, updateEmailVerified}) {
+  const request = genGetReqWithRefreshToken(`${gohost}/api/user/panel`, refreshToken);
   try {
     const response = await fetch(request);
     if (response.ok) {
@@ -9,15 +10,18 @@ async function authenticate({refreshToken, updateLoggedIn, updateAccountName, up
       if (body.refreshToken) {
         localStorage.setItem("refreshToken", body.refreshToken);
       }
-      updateLoggedIn(true)
+      updateLoggedIn(true);
       updateAccountName(body.accountName);
       updateDisplayName(body.displayName);
       updateRole(body.role);
       updateEmail(body.email);
+      updateEmailVerified(body.emailVerified);
     }else if (response.status === 401) {
-      console.log("not logged in")
-      //window.alert("please login")
-    }else if (response.status ===500){
+      updateLoggedIn(false);
+    }else if (response.status === 404) {
+      console.log("404")
+      updateLoggedIn(false);
+    }else {
       window.alert("Internal server error. Please try later.");
     }
     

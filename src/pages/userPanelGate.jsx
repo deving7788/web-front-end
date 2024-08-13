@@ -1,11 +1,12 @@
 import UserPanel from "./userPanel.jsx";
 import UserPanelNotLoggedIn from "./userPanelNotLoggedIn.jsx";
+import UserPanelNotVerified from "./userPanelNotVerified.jsx";
 import {useMainContext} from "../context/mainContext.jsx";
 
 function UserPanelGate() {
-  const {loggedIn, setLoggedIn} = useMainContext();
+  const {loggedIn, emailVerified} = useMainContext();
   if (loggedIn) {
-    return <UserPanel/>
+    return emailVerified ? <UserPanel/> : <UserPanelNotVerified/>
   }else {
     return <UserPanelNotLoggedIn/>
   }

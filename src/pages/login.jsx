@@ -2,12 +2,13 @@ import {useState} from "react";
 import {redirectTo} from "../router.jsx";
 import {useMainContext} from "../context/mainContext.jsx";
 import {genPostReq} from "../utils";
+import {gohost} from "../assets/data.jsx";
 
 function Login() {
   const [accountName, setAccountName] = useState("");
   const [password, setPassword] = useState("");
   const [wrongCredential, setWrongCredential] = useState(false);
-  const {updateLoggedIn, updateAccountName, updateDisplayName, updateRole, updateEmail} = useMainContext();
+  const {updateLoggedIn, updateAccountName, updateDisplayName, updateRole, updateEmail, updateEmailVerified} = useMainContext();
   
   function handleChange(e) {
     switch (e.target.name) {
@@ -30,7 +31,7 @@ function Login() {
     }
 
     try {
-      const request = genPostReq("http://localhost:8080/api/user/login", bodyJson);
+      const request = genPostReq(`${gohost}/api/user/login`, bodyJson);
       const response = await fetch(request);
       if (response.ok) {
         const body = await response.json();
@@ -40,11 +41,12 @@ function Login() {
         updateDisplayName(body.displayName);
         updateRole(body.role);
         updateEmail(body.email);
+        updateEmailVerified(body.emailVerified)
 
         updateLoggedIn(true);
         setWrongCredential(false);
         return redirectTo("/");
-      }else if (response.status == 401) {
+      }else if (response.status == 400) {
         setWrongCredential(true);
       }else {
         window.alert("Internal server error, please try later");

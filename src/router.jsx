@@ -98,7 +98,6 @@ function redirectTo(path) {
 }
 
 function Link({to, className, children}) {
-  //const {setErrorFlag} = useRouterContext();
   
   function handleClick(e) {
     e.preventDefault();

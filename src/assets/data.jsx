@@ -4,4 +4,6 @@ const navbarTitle = [
     { id: 3, title: "Forum", link: "/forum"}
 ] 
 
-export {navbarTitle}
+const gohost= "http://localhost:8080";
+
+export {navbarTitle, gohost};

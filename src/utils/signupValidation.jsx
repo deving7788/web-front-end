@@ -31,8 +31,11 @@ const passValidConst = {
   NO_Numbers: "Please include numbers", 
   NO_UPPER_CASE: "Please include uppercase letters",
   OK: "",
+  SUCCESS: "SUCCESS",
+  WRONG_PASSWORD: "Password is incorrect",
   INVALID_CHARACTER: "Please use numbers, letters, and $, _, !, -, @",
   PASSWORDS_NOT_SAME: "Passwords must be same",
+  NEW_PASSWORDS_NOT_SAME: "New passwords must be same",
 }
 
 
