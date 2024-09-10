@@ -1,12 +1,9 @@
 import {Link} from "../router.jsx"
 function UserPanelNotLoggedIn() {
   return (
-    <div>
-      <div className="user-panel-not-loggedin-page">
+    <div className="user-panel-not-logged-in-page">
+      <div className="user-panel-not-logged-in-content">
         <Link to="/login">Please login</Link>
-      </div>
-      <div>
-        <Link to="/">Back to Home</Link>
       </div>
     </div>
   )

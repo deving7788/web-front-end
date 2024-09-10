@@ -1,9 +1,9 @@
 const navbarTitle = [
     { id: 1, title: "Home", link: "/"},
     { id: 2, title: "Blog", link: "/blogs"},
-    { id: 3, title: "Forum", link: "/forum"}
 ] 
 
-const gohost= "http://localhost:8080";
+const gohost = "http://localhost:8080";
+const frontendHost = "http://localhost:5000";
 
-export {navbarTitle, gohost};
+export {navbarTitle, gohost, frontendHost};

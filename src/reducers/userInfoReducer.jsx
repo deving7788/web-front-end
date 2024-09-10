@@ -8,6 +8,10 @@ function userInfoReducer(state, action) {
       return {...state, role: action.payload};
     case "SET_EMAIL":
       return {...state, email: action.payload};
+    case "SET_EMAIL_VERIFIED":
+      return {...state, emailVerified: action.payload};
+    default:
+      return {...state};
   }
 }
 

@@ -66,8 +66,10 @@ function Signup() {
     if(rofAccName !== "OK" || rofDisName !== "OK" || rofCreaPass !== "OK" || rofConfPass !== "OK" || rofEmail !== "OK") {
       return
     }
+    
+    const emailLC = email.toLowerCase();
 
-    const bodyObj = {accountName, displayName, email, password: createPassword, role: "user"};
+    const bodyObj = {accountName, displayName, email: emailLC, password: createPassword, role: "user"};
     const bodyJson = JSON.stringify(bodyObj);
     const signupRequest = genPostReq(`${gohost}/api/user/signup`, bodyJson);
 
@@ -139,14 +141,14 @@ function Signup() {
               <label htmlFor="createPassword" className="signup-item-label">Password</label>
               <div>
                 <label className="signup-item-prom">{passValidConst[createPasswordProm]}</label>
-                <input type="text" id="createPassword" name="createPassword" className="signup-item-input" value={createPassword} maxLength="50" onChange={handleChange}/>
+                <input type="password" id="createPassword" name="createPassword" className="signup-item-input" value={createPassword} maxLength="50" onChange={handleChange}/>
               </div>
             </div>
             <div className="signup-item">
               <label htmlFor="confirmPassword" className="signup-item-label">Confirm password</label>
               <div>
                 <label className="signup-item-prom">{passValidConst[confirmPasswordProm]}</label>
-                <input type="text" id="confirmPassword" name="confirmPassword" className="signup-item-input" value={confirmPassword} maxLength="50" onChange={handleChange}/>
+                <input type="password" id="confirmPassword" name="confirmPassword" className="signup-item-input" value={confirmPassword} maxLength="50" onChange={handleChange}/>
               </div>
             </div>
           </div>

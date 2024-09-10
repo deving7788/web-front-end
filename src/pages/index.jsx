@@ -6,5 +6,6 @@ import Forum from "./forum.jsx";
 import SignupGate from "./signupGate.jsx";
 import UserPanelGate from "./userPanelGate.jsx";
 import LoginGate from "./loginGate.jsx";
+import Blog from "./blog.jsx";
 
-export {Home, MainFrame, ErrPage, Blogs, Forum, SignupGate, UserPanelGate, LoginGate};
+export {Home, MainFrame, ErrPage, Blogs, Forum, SignupGate, UserPanelGate, LoginGate, Blog};

@@ -255,7 +255,7 @@ function UserSetting() {
               <div className={changeDisplayName ? "display-name-change-btn hidden btn" : "display-name-change-btn btn"} onClick={showDisplayNameChangeInput}>Change</div>
               <input type="submit" className={changeDisplayName ? "display-name-change-confirm-btn btn" : "display-name-change-confirm-btn hidden btn"} value="Confirm"/>
             </div>
-            <input className={changeDisplayName ? "display-name-change-input" : "display-name-change-input hidden"} placeholder="new display name" value={newDisplayName} onChange={handleDisplayNameChange}/>
+            <input className={changeDisplayName ? "display-name-change-input" : "display-name-change-input hidden"} placeholder="new display name" value={newDisplayName} onChange={handleDisplayNameChange} maxLength="100"/>
             <div className={changeDisplayName ? "display-name-change-cancel-btn btn" : "display-name-change-btn hidden btn"} onClick={cancelDisplayNameChange}>Cancel</div>
           </form>
         </section>
@@ -267,7 +267,7 @@ function UserSetting() {
               <div className={changeEmail ? "email-change-btn hidden btn" : "email-change-btn btn"} onClick={showEmailChangeInput} >Change</div>
               <input type="submit" className={changeEmail ? "email-change-confirm-btn btn" : "email-change-confirm-btn hidden btn"} value="Confirm"/>
             </div>
-            <input className= {changeEmail ? "email-change-input" : "email-change-input hidden"} placeholder="new email address" value={newEmail} onChange={handleEmailChange}/>
+            <input className= {changeEmail ? "email-change-input" : "email-change-input hidden"} maxLength="100" placeholder="new email address" value={newEmail} onChange={handleEmailChange}/>
             <div className={changeEmail ? "email-change-cancel-btn btn" : "email-change-btn hidden btn"} onClick={cancelEmailChange}>Cancel</div>
           </form>
         </section>
@@ -279,21 +279,21 @@ function UserSetting() {
                 <label htmlFor="change-password-input-current" className="change-password-label">Current password</label>
                 <div>
                   <label className="current-password-prom">{passValidConst[currentPasswordProm]}</label>
-                  <input className="change-password-input" id="change-password-input-current" name="change-password-input-current" value={currentPassword} onChange={handleCurrentPasswordChange}/>
+                  <input type="password" className="change-password-input" id="change-password-input-current" name="change-password-input-current" maxLength="50" value={currentPassword} onChange={handleCurrentPasswordChange}/>
                 </div>
               </div>
               <div className="change-password-item">
                 <label htmlFor="change-password-input-new" className="change-password-label">New password</label>
                 <div>
                   <label className="new-password-prom">{passValidConst[newPasswordProm]}</label>
-                  <input className="change-password-input" id="change-password-input-new" name="change-password-input-new" value={newPassword} onChange={handleNewPasswordChange}/>
+                  <input type="password" className="change-password-input" id="change-password-input-new" name="change-password-input-new" value={newPassword} maxLength="50" onChange={handleNewPasswordChange}/>
                 </div>
               </div>
               <div className="change-password-item">
                 <label htmlFor="change-password-input-confirm" className="change-password-label">Confirm password</label>
                 <div>
                   <label className="confirm-password-prom">{passValidConst[confirmPasswordProm]}</label>
-                  <input className="change-password-input" id="change-password-input-confirm" name="change-password-input-confirm" value={confirmPassword} onChange={handleConfirmPasswordChange}/>
+                  <input type="password" className="change-password-input" id="change-password-input-confirm" name="change-password-input-confirm" value={confirmPassword} maxLength="50" onChange={handleConfirmPasswordChange}/>
                 </div>
               </div>
             </div>
@@ -310,7 +310,7 @@ function UserSetting() {
               {accountDeleted ? "Your account has been deleted." : "Your account and data will be deleted permanently!"}
             </div>
             <label className={"delete-account-prom"}>{passValidConst[deleteAccountProm]}</label>
-            <input className="delete-account-password" type="text" onChange={handleDeleteAccountPasswordChange} placeholder="Please enter your password" value={deleteAccountPassword}/>
+            <input className="delete-account-password" type="password" onChange={handleDeleteAccountPasswordChange} maxLength="50" placeholder="Please enter your password" value={deleteAccountPassword}/>
             <div className="delete-account-btns-container">
               <input type="submit" className="delete-account-confirm-btn btn" value="Confirm"/>
               <div className="delete-account-cancel-btn btn" onClick={cancelDeleteAccount}>Cancel</div>

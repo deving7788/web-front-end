@@ -11,7 +11,9 @@ function TopBanner() {
   function handleLoginClick() {
     if (loggedIn) {
       const refreshToken = localStorage.getItem("refreshToken");
-      authenticate({refreshToken, updateLoggedIn, updateAccountName, updateDisplayName, updateRole, updateEmail, updateEmailVerified});
+      if (refreshToken) {
+        authenticate({refreshToken, updateLoggedIn, updateAccountName, updateDisplayName, updateRole, updateEmail, updateEmailVerified});
+      }
       toggleSettingVisibility(true);
     }
   }

@@ -1,3 +1,4 @@
+import {useEffect} from "react";
 import UserPanel from "./userPanel.jsx";
 import UserPanelNotLoggedIn from "./userPanelNotLoggedIn.jsx";
 import UserPanelNotVerified from "./userPanelNotVerified.jsx";

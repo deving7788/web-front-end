@@ -23,11 +23,14 @@ function UserPanelNotVerified() {
         updateWaitEmailSent(false);
         updateEmailSent(true);
       }else if(response.status === 401) {
+        updateWaitEmailSent(false);
         updateLoggedIn(false);
       }else {
+        updateWaitEmailSent(false);
         window.alert("Internal server error, please try later.");
       }
     }catch (err) {
+      updateWaitEmailSent(false);
       console.log(err);
     }
   }
@@ -62,6 +65,7 @@ function UserPanelNotVerified() {
       const response = await fetch(request);
       if (response.ok) {
         const resBody = await response.json();
+        updateEmailSent(false);
         updateEmail(resBody.email);
         updateEmailVerified(resBody.emailVerified);
         updateNewEmailProm("INITAL_PROM");

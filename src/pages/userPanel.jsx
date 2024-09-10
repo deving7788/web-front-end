@@ -5,15 +5,15 @@ function UserPanel() {
   return (
     <div className="user-panel-page">
       <aside className="user-panel-left">
-        <div>left</div>
-        <div>left</div>
-        <div>left</div>
+        <div></div>
+        <div></div>
+        <div></div>
       </aside>
       <div className="user-panel-middle">
-        <div>middle</div>
-        <div>middle</div>
-        <div>middle</div>
-        <div>middle</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
       <UserSetting/>
     </div>

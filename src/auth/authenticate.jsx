@@ -27,7 +27,6 @@ async function authenticate({refreshToken, updateLoggedIn, updateAccountName, up
     
   }catch (err) {
     window.alert("Connection error. Please try again.");
-    console.log(err);
   }
 }
 

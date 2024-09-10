@@ -1,4 +1,4 @@
-import Login from "./signup.jsx";
+import Login from "./login.jsx";
 import LoginLoggedIn from "./loginLoggedIn.jsx";
 import {useMainContext} from "../context/mainContext.jsx";
 

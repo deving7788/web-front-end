@@ -28,7 +28,7 @@ const passValidConst = {
   ZERO_LENGTH_CONF_PASS: "",
   SHORTER_THAN_SIX: "Please use at least 8 characters",
   ALL_NUMBER: "Please do not use numbers only",
-  NO_Numbers: "Please include numbers", 
+  NO_NUMBERS: "Please include numbers", 
   NO_UPPER_CASE: "Please include uppercase letters",
   OK: "",
   SUCCESS: "SUCCESS",
@@ -100,7 +100,7 @@ function validatePassword(password) {
     const containsLetter = new RegExp("[^a-zA-Z@$_!-]");
     const rofContainsLetter = containsLetter.test(password);
     if(!rofContainsLetter){
-      return "NO_Numbers"; 
+      return "NO_NUMBERS"; 
     }
 
     const containsUpp = new RegExp("[A-Z]");

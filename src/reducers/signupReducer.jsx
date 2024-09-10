@@ -23,7 +23,6 @@ function signupReducer(state, action) {
     case "RESET_CONFIRM_PASSWORD_PROM": 
       return {...state, confirmPasswordProm: action.payload};
     default:
-      console.warn("Unknown action type in signupReducer: ", action.type);
       return {...state};
 	}
 }
