@@ -6,7 +6,7 @@ function ColorTheme() {
   const themeConRef = useRef(null);
 
   function handleClickOut(e) {
-    const btnColor = document.getElementById("btn-color-theme");
+    const btnColor = document.getElementById("color-theme-btn");
     if(themeConRef && !themeConRef.current.contains(e.target) && e.target !== btnColor) {
       setShowThemesList(false); 
     }
@@ -43,10 +43,10 @@ function ColorTheme() {
   useEffect(setCSS, [colorTheme]);
 
   return (
-      <span>
-        <b id="btn-color-theme" className="btn-color-theme btn" onClick={() => setShowThemesList(!showThemesList)}>
+      <div>
+        <div id="color-theme-btn" className="color-theme-btn btn" onClick={() => setShowThemesList(!showThemesList)}>
           Theme
-        </b>
+        </div>
         <div ref={themeConRef} className={showThemesList ? "themes-list-container show" : "themes-list-container"}>
           <ul className="themes-list">
             <li onClick={()=>setColorTheme("system")}>System</li>
@@ -54,7 +54,7 @@ function ColorTheme() {
             <li onClick={()=>setColorTheme("to-dark")}>Dark</li>
           </ul>
         </div>
-      </span>
+      </div>
   )
 }
 

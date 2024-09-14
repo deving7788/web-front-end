@@ -9,7 +9,7 @@
   --clr-btn-normal: #0d997c;
   --clr-btn-hover: #11bd9a;
   --clr-section-border: #d1b8b6;
-  --clr-comp-border: #5c5950;
+  --clr-comp-border: #c4b7b7;
   --clr-alert: #bf660d;
   --clr-warning: #ba3c06;
   --clr-loading: #68c740;
@@ -83,30 +83,51 @@ input {
 .top-banner {
   width: 100;
   height: 80px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
   flex-direction: row;
+  align-items: center;
+  justify-items: center;
   border-bottom: solid var(--clr-section-border) 2.5px;
-  padding-top: 10px;
 }
-.top-banner > span:nth-of-type(1) {
-  flex: 12;
+.navbar-container {
+  width: 500px;
   text-align: center;
 }
-.top-banner > span:nth-of-type(2) {
-  flex: 1;
-  text-align: center;
-  font-size: 1.2rem;
+.top-banner-btns-container {
+  width: 400px;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly; 
+  align-items: start;
 }
-.top-banner > span:nth-of-type(3) {
-  flex: 1;
-  text-align: center;
-  font-size: 1.2rem;
-}
-.top-banner > span:nth-of-type(4) {
-  flex: 1;
+.signup-btn-container {
+  width: 120px;
   text-align: center;
   font-size: 1.2rem;
 }
+.login-btn-container {
+  width: 120px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.color-theme-btn-container {
+  width: 130px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.signup-btn.btn, .login-btn.btn {
+  display: inline-block;
+  width: 120px;
+  font-weight: 600;
+  overflow: clip;
+}
+.signup-btn.hidden {
+  visibility: hidden;
+}
+/** end top-banner **/
+
+/** st navbar **/
 .navbar {
   display: inline-block;
 }
@@ -114,20 +135,14 @@ input {
   margin-right: 8rem;
   font-size: 2rem;
 }
-.btn-signup, .btn-login {
-  display: inline-block;
-  width: 120px;
-}
-.btn-color-theme {
-  display: inline-block;
-  width: 130px;
-}
-.btn-signup.hidden {
-  visibility: hidden;
-}
-/** end top-banner **/
+/** end navbar **/
 
 /** st color-theme **/
+.color-theme-btn.btn {
+  display: inline-block;
+  width: 130px;
+  font-weight: 600;
+}
 .themes-list-container {
   display: inline-block;
   visibility: hidden;
@@ -801,13 +816,22 @@ input {
 }
 /** end error page **/
 /** st blog page **/
-.blogs-container {
+.blog-titles-container {
+  width: 90%;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   align-items: start;
   padding: 2rem 3rem;
+  margin: 0 auto;
 }
-.blog-article {
+.blog-title {
+  width: fit-content;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.blog-title-link {
+  text-decoration: none;
 }
 /** end blog page **/

@@ -7,7 +7,7 @@ function Blogs() {
   const {articles, setArticles} = useMainContext();
 
   async function getAllArticles() {
-    const request = genGetReq(`${gohost}/api/blogs`);
+    const request = genGetReq(`${gohost}/api/blog/article-titles`);
     try {
       const response = await fetch(request);
       const body = await response.json();
@@ -21,14 +21,15 @@ function Blogs() {
 
   return (
     <div className="blogs-page">
-      <div className="blogs-container">
+      <div className="blog-titles-container">
       {
         articles.map((article) => {
-          const {articleId, title, content} = article;
+          const {articleId, title} = article;
           return (
-            <div key={articleId} className="blog-article">
-              <div dangerouslySetInnerHTML={{__html: title}}/>
+            <div key={articleId} className="blog-title">
+                <a href="" className="blog-title-link"><div dangerouslySetInnerHTML={{__html: title}}/></a>
             </div>
+            
           )
         })
       }
