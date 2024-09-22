@@ -2,7 +2,7 @@ import {StrictMode} from 'react';
 import ReactDOM from 'react-dom/client';
 import App from "./app.jsx";
 import MainContextProvider from "./context/mainContext.jsx";
-import UserPanelContextProvider from "./context/userPanelContext.jsx";
+import SecondaryContextProvider from "./context/secondaryContext.jsx";
 
 const preferDark = window.matchMedia("(prefers-color-scheme: dark)");
 if(preferDark.matches) {
@@ -23,9 +23,9 @@ else {
 ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
     <MainContextProvider>
-      <UserPanelContextProvider>
+      <SecondaryContextProvider>
         <App />
-      </UserPanelContextProvider>
+      </SecondaryContextProvider>
     </MainContextProvider>
   </StrictMode>
 )

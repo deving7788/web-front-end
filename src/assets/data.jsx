@@ -1,6 +1,6 @@
 const navbarTitle = [
     { id: 1, title: "Home", link: "/"},
-    { id: 2, title: "Blog", link: "/blogs"},
+    { id: 2, title: "Blog", link: "/articles"},
 ] 
 
 const gohost = "http://localhost:8080";

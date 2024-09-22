@@ -2,6 +2,7 @@
   color-scheme: light dark;
   --clr-bg-dark: #2c2f33;
   --clr-bg-section-dark: #030124;
+  --clr-bg-blog-dark: #1d222b;
   --clr-txt-dark: #f6f7fa;
   --clr-footer-dark: #121111;
   --clr-txt-hl: #b8b9d4;
@@ -40,7 +41,8 @@ input {
   color: var(--clr-txt-dark);
 }
 
-.home-page, .signup-page, .user-panel-not-logged-in-page, .email-vrfct-page, .login-page, .blogs-page, .signup-logged-in, .login-logged-in-page {
+.home-page, .signup-page, .user-panel-not-logged-in-page, .email-vrfct-page, 
+.login-page, .blogs-page, .signup-logged-in, .login-logged-in-page, .blog-page {
   min-height: calc(100vh - 80px - 100px);
 }
 
@@ -178,9 +180,29 @@ input {
 /** end footer **/
 
 /** st home page **/
-.home-page > span {
-  display: block;
-  transform: translateY(80px);
+.featured-blog-container {
+  width: 1250px;
+  min-height: calc(100vh - 80px - 100px);
+  margin: 0 auto;
+  font-weight: 600;
+  padding: 2rem 1rem;
+  background-color: var(--clr-bg-blog-dark);
+  border-bottom: solid 1px var(--clr-section-border);
+}
+.featured-blog-title-container {
+  text-align: center;
+  font-size: 33px;
+  text-transform: capitalize;
+}
+.featured-blog-author-container, .featured-blog-edited-container {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+  text-align: end;
+}
+.featured-blog-content-container {
+  font-size: 24px;
+  font-weight: 500;
 }
 /** end home page **/
 
@@ -815,7 +837,7 @@ input {
   margin-top: 30px;
 }
 /** end error page **/
-/** st blog page **/
+/** st blogs page **/
 .blog-titles-container {
   width: 90%;
   display: flex;
@@ -831,7 +853,29 @@ input {
   margin-bottom: 20px;
   text-transform: capitalize;
 }
-.blog-title-link {
-  text-decoration: none;
+/** end blogs page **/
+/** st blog page **/
+.blog-container {
+  width: 1250px;
+  min-height: calc(100vh - 80px - 100px);
+  margin: 0 auto;
+  font-weight: 600;
+  padding: 2rem 1rem;
+  background-color: var(--clr-bg-blog-dark);
+}
+.blog-title-container {
+  text-align: center;
+  font-size: 33px;
+  text-transform: capitalize;
+}
+.blog-author-container, .blog-edited-container {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+  text-align: end;
+}
+.blog-content-container {
+  font-size: 24px;
+  font-weight: 500;
 }
 /** end blog page **/

@@ -2,11 +2,11 @@ import Navbar from "./navbar";
 import ColorTheme from "./colorTheme.jsx";
 import {Link} from "../router.jsx";
 import {useMainContext} from "../context/mainContext.jsx";
-import {useUserPanelContext} from "../context/userPanelContext.jsx";
+import {useSecondaryContext} from "../context/secondaryContext.jsx";
 import {authenticate} from "../auth";
 
 function TopBanner() {
-  const {toggleSettingVisibility} = useUserPanelContext();
+  const {toggleSettingVisibility} = useSecondaryContext();
   const {displayName, loggedIn, updateLoggedIn, updateAccountName, updateDisplayName, updateRole, updateEmail, updateEmailVerified} = useMainContext();
   function handleLoginClick() {
     if (loggedIn) {

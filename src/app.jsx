@@ -23,8 +23,8 @@ function App() {
      component: <MainFrame/>,
      children: [
        {path: "/", component: <Home/>,},
-       {path: "/blogs", component: <Blogs/>,},
-       {path: "/blog", component: <Blog/>,},
+       {path: "/articles", component: <Blogs/>,},
+       {path: "/article", component: <Blog/>,},
        {path: "/signup", component: <SignupGate/>,},
        {path: "/login", component: <LoginGate/>,},
        {path: "/forum", component: <Forum/>,},

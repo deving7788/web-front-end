@@ -1,7 +1,7 @@
 import { useState, useEffect, createContext, useContext } from "react";
 
 let allChildren = [];
-let errorComponent;
+//let errorComponent;
 let allPaths = new Set();
 
 function PreErrorPage() {
@@ -13,11 +13,11 @@ const RouterContext = createContext(null);
 
 function Router({routes}) {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
-  routes.forEach((route) => {
-    if (route.path === "/*") {
-      errorComponent = route.component;
-    }
-  })
+  //routes.forEach((route) => {
+  //  if (route.path === "/*") {
+  //    errorComponent = route.component;
+  //  }
+  //})
 
   function getAllPaths(allPaths, routes) {
     routes.map(route => {

@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {useMainContext} from "../context/mainContext.jsx";
-import {useUserPanelContext} from "../context/userPanelContext.jsx";
+import {useSecondaryContext} from "../context/secondaryContext.jsx";
 import {redirectTo, Link} from "../router.jsx";
 import {disNameValidConst, validateDisplayName, emailValidConst, passValidConst, validateEmail, validatePassword, genPatchReqWithRefreshToken, 
        genPostReqWithRefreshToken, genDeleteReqWithRefreshToken} from "../utils";
@@ -10,7 +10,7 @@ import {authenticate} from "../auth";
 function UserSetting() {
   console.log("test user setting");
   const {updateLoggedIn, accountName, displayName, email, updateDisplayName, updateEmail, updateEmailVerified} = useMainContext();
-  const {settingVisibility, toggleSettingVisibility} = useUserPanelContext();
+  const {settingVisibility, toggleSettingVisibility} = useSecondaryContext();
   const [changeDisplayName, setChangeDisplayName] = useState(false);
   const [changeEmail, setChangeEmail] = useState(false);
   const [newDisplayName, setNewDisplayName] = useState("");

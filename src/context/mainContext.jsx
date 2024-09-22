@@ -14,8 +14,6 @@ function MainContextProvider({children}) {
 
   const [loggedIn, updateLoggedIn] = useState(false);
   const [state, dispatch] = useReducer(userInfoReducer, userInfoInitial);
-  const [articles, setArticles] = useState([]);
-
 
   function updateAccountName(accountName) {
     dispatch({type: "SET_ACCOUNT_NAME", payload: accountName});
@@ -33,7 +31,7 @@ function MainContextProvider({children}) {
     dispatch({type: "SET_EMAIL_VERIFIED", payload: emailVerified});
   }
 
-  return <MainContext.Provider value={{loggedIn, updateLoggedIn, ...state, updateAccountName, updateDisplayName, updateRole, updateEmail, updateEmailVerified, articles, setArticles}}>
+  return <MainContext.Provider value={{loggedIn, updateLoggedIn, ...state, updateAccountName, updateDisplayName, updateRole, updateEmail, updateEmailVerified}}>
            {children}
          </MainContext.Provider>;
 }

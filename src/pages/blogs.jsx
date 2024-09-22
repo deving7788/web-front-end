@@ -2,16 +2,17 @@ import {useState, useEffect} from "react";
 import {genGetReq} from "../utils";
 import {gohost} from "../assets/data.jsx";
 import {useMainContext} from "../context/mainContext.jsx";
+import {useSecondaryContext} from "../context/secondaryContext.jsx";
+import {Link} from "../router.jsx";
 
 function Blogs() {
-  const {articles, setArticles} = useMainContext();
-
+  console.log("test in blogs page")
+  const {articles, setArticles} = useSecondaryContext();
   async function getAllArticles() {
     const request = genGetReq(`${gohost}/api/blog/article-titles`);
     try {
       const response = await fetch(request);
       const body = await response.json();
-      console.log(body);
       setArticles(body);
     }catch(err) {
       console.log(err)
@@ -27,7 +28,7 @@ function Blogs() {
           const {articleId, title} = article;
           return (
             <div key={articleId} className="blog-title">
-                <a href="" className="blog-title-link"><div dangerouslySetInnerHTML={{__html: title}}/></a>
+                <Link to={`/article?id=${articleId}`}className="router-link"><div dangerouslySetInnerHTML={{__html: title}}/></Link>
             </div>
             
           )
