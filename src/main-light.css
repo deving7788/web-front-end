@@ -183,11 +183,10 @@ input {
 .featured-blog-container {
   width: 1250px;
   min-height: calc(100vh - 80px - 100px);
-  margin: 0 auto;
+  margin: 20px auto;
   font-weight: 600;
   padding: 2rem 1rem;
   background-color: var(--clr-bg-blog-light);
-  border-bottom: solid 1px var(--clr-section-border);
 }
 .featured-blog-title-container {
   text-align: center;

@@ -16,8 +16,6 @@ function App() {
       }
   }, []);
 
-  console.log("test in app")
-
   const routes = [
     {path: "/", 
      component: <MainFrame/>,

@@ -6,7 +6,6 @@ import {useSecondaryContext} from "../context/secondaryContext.jsx";
 import {Link} from "../router.jsx";
 
 function Blogs() {
-  console.log("test in blogs page")
   const {articles, setArticles} = useSecondaryContext();
   async function getAllArticles() {
     const request = genGetReq(`${gohost}/api/blog/article-titles`);
@@ -15,7 +14,7 @@ function Blogs() {
       const body = await response.json();
       setArticles(body);
     }catch(err) {
-      console.log(err)
+      window.alert("Connection error, please try later.");
     }
   }
   useEffect(() => getAllArticles, []);

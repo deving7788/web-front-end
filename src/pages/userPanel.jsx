@@ -1,7 +1,6 @@
 import {UserSetting} from "../components"
 
 function UserPanel() {
-  console.log("test user panel");
   return (
     <div className="user-panel-page">
       <aside className="user-panel-left">

@@ -4,7 +4,6 @@ import {genGetReq} from "../utils";
 import {useEffect} from "react";
 
 function Home() {
-  console.log("test in home page")
   const {featuredArticles, setFeaturedArticles} = useSecondaryContext();
   const request = genGetReq(`${gohost}/api/blog/featured-articles`);
   useEffect(() => {
@@ -13,7 +12,6 @@ function Home() {
         const response = await fetch(request);
         if (response.ok) {
           const articles = await response.json();
-          console.log("response body in home page: ", articles)
           setFeaturedArticles(articles);
         }else {
           window.alert("Internal server error, please try later.");

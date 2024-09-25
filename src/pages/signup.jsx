@@ -78,7 +78,6 @@ function Signup() {
       if (response.ok){
         updateLoggedIn(true);
         const body = await response.json();
-        console.log("body is ", body)
         if ("refreshToken" in body) {
           localStorage.setItem("refreshToken", body.refreshToken)
         }

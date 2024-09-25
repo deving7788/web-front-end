@@ -4,7 +4,6 @@ import {useEffect} from "react";
 import {useSecondaryContext} from "../context/secondaryContext.jsx";
 
 function Blog() {
-  console.log("test in blog page")
   const articleIdQuery = window.location.search.split("=")[1];
   const {article, setArticle} = useSecondaryContext();
   const {articleId, author, title, content, createdAt, modifiedAt, featured, category} = article;

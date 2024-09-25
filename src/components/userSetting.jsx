@@ -8,7 +8,6 @@ import {gohost} from "../assets/data.jsx";
 import {authenticate} from "../auth";
 
 function UserSetting() {
-  console.log("test user setting");
   const {updateLoggedIn, accountName, displayName, email, updateDisplayName, updateEmail, updateEmailVerified} = useMainContext();
   const {settingVisibility, toggleSettingVisibility} = useSecondaryContext();
   const [changeDisplayName, setChangeDisplayName] = useState(false);
