@@ -17,13 +17,15 @@ function Blogs() {
       window.alert("Connection error, please try later.");
     }
   }
-  useEffect(() => getAllArticles, []);
+  useEffect(() => {
+    getAllArticles();
+  }, []);
 
   return (
     <div className="blogs-page">
       <div className="blog-titles-container">
       {
-        articles.map((article) => {
+        articles && articles.map((article) => {
           const {articleId, title} = article;
           return (
             <div key={articleId} className="blog-title">

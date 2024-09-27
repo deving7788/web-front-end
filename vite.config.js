@@ -6,7 +6,7 @@ import fs from 'fs'
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 5000,
+    port: 8010,
     open: true,
   },
 })

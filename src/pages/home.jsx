@@ -25,7 +25,7 @@ function Home() {
   return (
     <div className="home-page">
       <div className="featured-blogs-container">
-        {featuredArticles.map((article) => {
+        {featuredArticles && featuredArticles.map((article) => {
             const {articleId, author, title, content, createdAt, modifiedAt} = article;
             let createdDate = String(createdAt).split("T")[0];
             createdDate = new Date(createdDate).toString().slice(0, 15);

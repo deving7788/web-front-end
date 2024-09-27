@@ -8,14 +8,16 @@ const preferDark = window.matchMedia("(prefers-color-scheme: dark)");
 if(preferDark.matches) {
   const darkLink = document.createElement("link");
   darkLink.rel = "stylesheet";
-  darkLink.href = "src/main-dark.css";
+  darkLink.href = "public/css/main-dark.css";
+  //darkLink.href = "/css/main-dark.css";
   darkLink.id = "css";
   document.head.append(darkLink);
 }
 else {
   const lightLink = document.createElement("link");
   lightLink.rel = "stylesheet";
-  lightLink.href = "src/main-light.css";
+  lightLink.href = "public/css/main-light.css";
+  //lightLink.href = "/css/main-light.css";
   lightLink.id = "css";
   document.head.appendChild(lightLink);
 }
