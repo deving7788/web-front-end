@@ -25,22 +25,18 @@ function ColorTheme() {
       case "system":
         preferDark = window.matchMedia("(prefers-color-scheme: dark)");
         if(preferDark.matches) {
-          linkCSS.href = "public/css/main-dark.css";
-          //linkCSS.href = "/css/main-dark.css";
+          linkCSS.href = "/css/main-dark.css";
         }else {
-          linkCSS.href = "public/css/main-light.css";
-          //linkCSS.href = "/css/main-light.css";
+          linkCSS.href = "/css/main-light.css";
         }
         break;
       case "to-light":
         preferDark = window.matchMedia("(prefers-color-theme: dark)");
-        linkCSS.href = "public/css/main-light.css";
-        //linkCSS.href = "/css/main-light.css";
+        linkCSS.href = "/css/main-light.css";
         break;
       case "to-dark":
         preferDark = window.matchMedia("(prefers-color-theme: dark)");
-        linkCSS.href = "public/css/main-dark.css";
-        //linkCSS.href = "/css/main-dark.css";
+        linkCSS.href = "/css/main-dark.css";
         break;
     }
   }
