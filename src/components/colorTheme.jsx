@@ -43,7 +43,7 @@ function ColorTheme() {
   useEffect(setCSS, [colorTheme]);
 
   return (
-      <div>
+      <div className="color-theme-container">
         <div id="color-theme-btn" className="color-theme-btn btn" onClick={() => setShowThemesList(!showThemesList)}>
           Theme
         </div>

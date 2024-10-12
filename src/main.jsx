@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from "./app.jsx";
 import MainContextProvider from "./context/mainContext.jsx";
 import SecondaryContextProvider from "./context/secondaryContext.jsx";
-import "./css/main-light.css";
+import "./css/main-dark.css";
 
 const preferDark = window.matchMedia("(prefers-color-scheme: dark)");
 if(preferDark.matches) {

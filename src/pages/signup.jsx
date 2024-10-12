@@ -113,7 +113,7 @@ function Signup() {
   return (
     <div className="signup-page"> 
       <div className="signup-section-container">
-        <form className="signup-form" onSubmit={submitForm}>
+        <form onSubmit={submitForm}>
           <div className="signup-items-container">
             <div className="signup-item">
               <label htmlFor="accountName" className="signup-item-label">Account name</label>
@@ -144,7 +144,7 @@ function Signup() {
               </div>
             </div>
             <div className="signup-item">
-              <label htmlFor="confirmPassword" className="signup-item-label">Confirm password</label>
+              <label htmlFor="confirmPassword" className="signup-item-label">Confirm</label>
               <div>
                 <label className="signup-item-prom">{passValidConst[confirmPasswordProm]}</label>
                 <input type="password" id="confirmPassword" name="confirmPassword" className="signup-item-input" value={confirmPassword} maxLength="50" onChange={handleChange}/>

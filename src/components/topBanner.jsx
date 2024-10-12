@@ -22,17 +22,13 @@ function TopBanner() {
     <div className="top-banner">
       <div className="navbar-container"><Navbar/></div>
       <div className="top-banner-btns-container">
-        <div className="signup-btn-container">
-          <div className={loggedIn ? "signup-btn hidden" : "signup-btn btn"}>
-            <Link to="/signup" className="router-link">Sign Up</Link>
-          </div>
+        <div className={loggedIn ? "signup-btn hidden" : "signup-btn btn"}>
+          <Link to="/signup" className="router-link">Sign Up</Link>
         </div>
-        <div className="login-btn-container">
-          <div className="login-btn btn" onClick={handleLoginClick}>
-            <Link to={loggedIn ? "/user-panel" : "/login"} className="router-link">{loggedIn ? displayName : "Log In"}</Link>
-          </div>
+        <div className="login-btn btn" onClick={handleLoginClick}>
+          <Link to={loggedIn ? "/user-panel" : "/login"} className="router-link">{loggedIn ? displayName : "Log In"}</Link>
         </div>
-        <div className="color-theme-btn-container">
+        <div>
           <ColorTheme/>
         </div>
       </div>
