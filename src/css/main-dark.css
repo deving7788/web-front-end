@@ -83,7 +83,7 @@ input {
 
 /** st top-banner **/
 .top-banner {
-  width: 100;
+  width: 100%;
   height: 80px;
   display: grid;
   grid-template-columns: 4fr 1fr;
@@ -123,7 +123,7 @@ input {
 }
 .navbar span {
   margin-right: 8rem;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
 }
 /** end navbar **/
@@ -174,26 +174,26 @@ input {
 
 /** st home page **/
 .featured-blog-container {
-  width: 1250px;
-  min-height: calc(100vh - 80px - 100px);
-  margin: 20px auto;
+  width: 900px;
+  margin: 0 auto;
+  margin-bottom: 20px;
   font-weight: 600;
-  padding: 2rem 1rem;
+  padding: 25px 35px;
   background-color: var(--clr-bg-blog-dark);
 }
 .featured-blog-title-container {
   text-align: center;
-  font-size: 33px;
+  font-size: 18px;
   text-transform: capitalize;
 }
 .featured-blog-author-container, .featured-blog-edited-container {
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 500;
   margin-top: 20px;
   text-align: end;
 }
 .featured-blog-content-container {
-  font-size: 24px;
+  font-size: 15px;
   font-weight: 500;
 }
 /** end home page **/
@@ -255,7 +255,7 @@ input {
   margin: 0 auto;
   width: 800px;
   height: 300px;
-  font-size: 25px;
+  font-size: 15px;
   font-weight: 600;
   align-content: center;
   text-align: center;
@@ -266,7 +266,7 @@ input {
   margin: 0 auto;
   width: 800px;
   height: 300px;
-  font-size: 25px;
+  font-size: 15px;
   font-weight: 600;
   align-content: center;
   text-align: center;
@@ -432,12 +432,12 @@ input {
 .user-setting{
   box-sizing: border-box;
   height: fit-content;
-  width: 500px;
+  width: 430px;
   align-items: start;
   justify-content: space-between;
   background-color: var(--clr-bg-section-dark);
-  padding: 20px;
-  padding-bottom: 40px;
+  padding: 15px;
+  padding-bottom: 30px;
   transition: var(--transition1);
   border-radius: 15px;
 }
@@ -450,11 +450,11 @@ input {
 }
 .account-name-text, .display-name-text, .email-text {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 15px;
 }
 .display-name-container {
   padding-top: 15px;
-  height: 150px;
+  height: 130px;
   border-bottom: var(--clr-comp-border) 2px solid;
 }
 .display-name-change-form, .email-change-form {
@@ -463,17 +463,17 @@ input {
   justify-content: space-between;
 }
 .display-name-change-left-btns-container, .email-change-left-btns-container {
-  width: 90px;
+  width: 80px;
   position: relative;
 }
 .display-name-change-confirm-btn, .email-change-confirm-btn, .display-name-change-btn, .email-change-btn {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   margin-right: 10px;
-  width: 90px;
+  width: 100%;
   height: 30px;
   text-align: center;
   align-content: center;
@@ -495,10 +495,12 @@ input {
   visibility: hidden;
 }
 .display-name-change-input {
-  font-size: 18px;
+  font-size: 15px;
+  width: 220px;
+  text-align: center;
 }
 .display-name-change-cancel-btn, .email-change-cancel-btn {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   width: 80px;
   height: 30px;
@@ -510,25 +512,27 @@ input {
 }
 .email-container {
   padding-top: 15px;
-  height: 150px;
+  height: 130px;
   border-bottom: var(--clr-comp-border) 2px solid;
 }
 .email-change-input {
-  font-size: 18px;
+  font-size: 15px;
+  width: 220px;
+  text-align: center;
 }
 .password-container{
-  padding-top: 30px;
+  padding-top: 20px;
   border-bottom: var(--clr-comp-border) 2px solid;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 .change-password-form {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 .change-password-form.hidden {
   display: none;
 }
 .change-password-btn {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   height: 30px;
   align-content: center;
@@ -540,8 +544,9 @@ input {
   margin: 0 auto;
 }
 .current-password-prom, .new-password-prom, .confirm-password-prom {
-  width: 300px;
-  height: 45px;
+  width: 320px;
+  height: 40px;
+  margin-bottom: 5px;
   display: block;
   align-content: end;
 }
@@ -550,17 +555,17 @@ input {
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 .change-password-label {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   height: fit-content;
   align-self: end;
 }
 .change-password-input {
-  width: 300px;
-  font-size: 18px;
+  width: 320px;
+  font-size: 15px;
 }
 .change-password-btns-container {
   display: flex;
@@ -571,14 +576,14 @@ input {
 }
 .change-password-confirm-btn {
   border: none;
-  width: 90px;
-  font-size: 16px;
+  width: 80px;
+  font-size: 15px;
   font-weight: 600;
 }
 .change-password-cancel-btn {
   border: none;
-  width: 90px;
-  font-size: 16px;
+  width: 80px;
+  font-size: 15px;
   font-weight: 600;
   text-align: center;
 }
@@ -608,21 +613,23 @@ input {
 }
 .delete-account-alert {
   margin-top: 15px;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--clr-warning);
+  text-align: center;
 }
 .delete-account-prom{
-  height: 30px;
-  width: 100%;
-  font-size: 18px;
+  height: 40px;
+  width: 320px;
+  font-size: 15px;
   font-weight: 600;
   margin-top: 15px;
+  margin-bottom: 5px;
   text-align: center;
   align-content: center;
 }
 .delete-account-password {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   width: 320px;
   margin-top: 5px;
@@ -660,12 +667,12 @@ input {
   margin-top: 40px;
 }
 .close-setting-btn {
-  width: 90px;
+  width: 80px;
   font-weight: bold;
   text-align: center;
 }
 .log-out-btn {
-  width: 90px;
+  width: 80px;
   font-weight: bold;
   text-align: center;
 }
@@ -674,8 +681,8 @@ input {
 /** st user panel not verified page **/
 .email-vrfct-container {
   position: relative;
-  width: 800px;
-  height: 500px;
+  width: 550px;
+  height: 420px;
   margin: 0 auto;
 }
 .email-vrfct-top-layer {
@@ -686,7 +693,7 @@ input {
   padding-top: 1px;
 }
 .email-vrfct-text {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
   height: 70px;
   margin-top: 30px;
@@ -699,7 +706,7 @@ input {
 }
 .email-vrfct-prom {
   width: 100%;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--clr-alert);
   align-content: center;
@@ -711,15 +718,15 @@ input {
 .email-vrfct-btns-container {
   display: flex;
   flex-direction: row;
-  height: 40px;
+  height: 30px;
   justify-content: space-around;
   margin-top: 40px;
 }
 .email-vrfct-verify-btn {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
-  width: 150px;
-  height: 40px;
+  width: 80px;
+  height: 30px;
   text-align: center;
   align-content: center;
   border: none;
@@ -728,19 +735,19 @@ input {
   margin-top: 40px; 
 }
 .email-vrfct-logout-btn {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
-  width: 150px;
-  height: 40px;
+  width: 120px;
+  height: 30px;
   text-align: center;
   align-content: center;
   border: none;
 }
 .email-vrfct-change-email-btn {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
-  width: 150px;
-  height: 40px;
+  width: 120px;
+  height: 30px;
   text-align: center;
   align-content: center;
   border: none;
@@ -760,52 +767,51 @@ input {
 }
 .email-vrfct-change-email-layer-email-label {
   display: block;
-  width: fit-content;
-  height: 40px;
+  width: 100%;
+  text-align: center;
   margin: 0 auto;
   margin-top: 30px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
-  align-content: center;
 }
 .email-vrfct-change-email-layer-form {
   display: flex;
   flex-direction: column;
 }
 .email-vrfct-change-email-layer-prom-label {
-  width: fit-content;
-  height: 40px;
+  width: 450px;
+  height: 30px;
   margin: 0 auto;
   margin-top: 50px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
-  align-content: center;
+  text-align: center;
 }
 .email-vrfct-change-email-layer-input {
   width: 450px;
-  height: 50px;
+  height: 30px;
   margin: 0 auto;
-  font-size: 22px;
+  font-size: 15px;
   align-content: center;
   text-align: center;
 }
 .email-vrfct-change-email-layer-submit {
-  width: 200px;
-  height: 50px;
+  width: 80px;
+  height: 30px;
   margin: 0 auto;
   border: none;
-  margin-top: 40px;
-  font-size: 18px;
+  margin-top: 80px;
+  font-size: 15px;
   font-weight: 600;
 }
 .email-vrfct-change-email-layer-cancel {
-  width: 200px;
-  height: 50px;
+  width: 80px;
+  height: 30px;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 60px;
   text-align: center;
   align-content: center;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
 }
 /** end user panel not verified page **/
@@ -819,27 +825,28 @@ input {
   text-align: center;
 }
 .error-page-message {
-  font-size: 25px;
+  font-size: 15px;
   font-weight: 600;
 }
 .error-page-link {
-  font-size: 25px;
+  font-size: 15px;
   font-weight: 600;
   margin-top: 30px;
 }
 /** end error page **/
 /** st blogs page **/
 .blog-titles-container {
-  width: 90%;
+  width: 900px;
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding: 2rem 3rem;
+  padding: 25px 15px;
   margin: 0 auto;
+  background-color: var(--clr-bg-blog-dark);
 }
 .blog-title {
   width: fit-content;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
   text-transform: capitalize;
@@ -847,26 +854,26 @@ input {
 /** end blogs page **/
 /** st blog page **/
 .blog-container {
-  width: 1250px;
+  width: 900px;
   min-height: calc(100vh - 80px - 100px);
   margin: 0 auto;
   font-weight: 600;
-  padding: 2rem 1rem;
+  padding: 25px 15px;
   background-color: var(--clr-bg-blog-dark);
 }
 .blog-title-container {
   text-align: center;
-  font-size: 33px;
+  font-size: 18px;
   text-transform: capitalize;
 }
 .blog-author-container, .blog-edited-container {
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 500;
   margin-top: 20px;
   text-align: end;
 }
 .blog-content-container {
-  font-size: 24px;
+  font-size: 15;
   font-weight: 500;
 }
 /** end blog page **/

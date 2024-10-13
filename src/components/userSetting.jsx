@@ -275,21 +275,21 @@ function UserSetting() {
           <form className={changePassword ? "change-password-form" : "change-password-form hidden"} onSubmit={submitNewPassword}>
             <div className="change-password-items-container">
               <div className="change-password-item">
-                <label htmlFor="change-password-input-current" className="change-password-label">Current password</label>
+                <label htmlFor="change-password-input-current" className="change-password-label">Current</label>
                 <div>
                   <label className="current-password-prom">{passValidConst[currentPasswordProm]}</label>
                   <input type="password" className="change-password-input" id="change-password-input-current" name="change-password-input-current" maxLength="50" value={currentPassword} onChange={handleCurrentPasswordChange}/>
                 </div>
               </div>
               <div className="change-password-item">
-                <label htmlFor="change-password-input-new" className="change-password-label">New password</label>
+                <label htmlFor="change-password-input-new" className="change-password-label">New</label>
                 <div>
                   <label className="new-password-prom">{passValidConst[newPasswordProm]}</label>
                   <input type="password" className="change-password-input" id="change-password-input-new" name="change-password-input-new" value={newPassword} maxLength="50" onChange={handleNewPasswordChange}/>
                 </div>
               </div>
               <div className="change-password-item">
-                <label htmlFor="change-password-input-confirm" className="change-password-label">Confirm password</label>
+                <label htmlFor="change-password-input-confirm" className="change-password-label">Confirm</label>
                 <div>
                   <label className="confirm-password-prom">{passValidConst[confirmPasswordProm]}</label>
                   <input type="password" className="change-password-input" id="change-password-input-confirm" name="change-password-input-confirm" value={confirmPassword} maxLength="50" onChange={handleConfirmPasswordChange}/>

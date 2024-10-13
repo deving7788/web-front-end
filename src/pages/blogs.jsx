@@ -28,9 +28,9 @@ function Blogs() {
         articles && articles.map((article) => {
           const {articleId, title} = article;
           return (
-            <div key={articleId} className="blog-title">
-                <Link to={`/article?id=${articleId}`}className="router-link"><div dangerouslySetInnerHTML={{__html: title}}/></Link>
-            </div>
+            <ul key={articleId} className="blog-title">
+                <li><Link to={`/article?id=${articleId}`}className="router-link"><div dangerouslySetInnerHTML={{__html: title}}/></Link></li>
+            </ul>
             
           )
         })

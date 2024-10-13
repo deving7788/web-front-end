@@ -24,33 +24,31 @@ function Home() {
   }, [])
   return (
     <div className="home-page">
-      <div className="featured-blogs-container">
-        {featuredArticles && featuredArticles.map((article) => {
-            const {articleId, author, title, content, createdAt, modifiedAt} = article;
-            let createdDate = String(createdAt).split("T")[0];
-            createdDate = new Date(createdDate).toString().slice(0, 15);
-            let modifiedDate = String(modifiedAt).split("T")[0];
-            modifiedDate = new Date(modifiedDate).toString().slice(0, 15);
-            return (
-              <div key={articleId} className="featured-blog-container">
-                <div className="featured-blog-title-container">
-                  {title}
-                </div>
-                <div className="featured-blog-author-container">
-                  <span>by {author}, </span>
-                  <span>{createdDate}</span>
-                </div>
-                <div className="featured-blog-content-container">
-                  <div dangerouslySetInnerHTML={{__html: content}}></div>
-                </div>
-                <div className="featured-blog-edited-container">
-                  {createdDate === modifiedDate ? "" : `edited on ${modifiedDate}`}
-                </div>
+      {featuredArticles && featuredArticles.map((article) => {
+          const {articleId, author, title, content, createdAt, modifiedAt} = article;
+          let createdDate = String(createdAt).split("T")[0];
+          createdDate = new Date(createdDate).toString().slice(0, 15);
+          let modifiedDate = String(modifiedAt).split("T")[0];
+          modifiedDate = new Date(modifiedDate).toString().slice(0, 15);
+          return (
+            <div key={articleId} className="featured-blog-container">
+              <div className="featured-blog-title-container">
+                {title}
               </div>
-            )
-          })
-        }
-      </div>
+              <div className="featured-blog-author-container">
+                <span>by {author}, </span>
+                <span>{createdDate}</span>
+              </div>
+              <div className="featured-blog-content-container">
+                <div dangerouslySetInnerHTML={{__html: content}}></div>
+              </div>
+              <div className="featured-blog-edited-container">
+                {createdDate === modifiedDate ? "" : `edited on ${modifiedDate}`}
+              </div>
+            </div>
+          )
+        })
+      }
     </div>
   )
 }
