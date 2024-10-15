@@ -877,3 +877,36 @@ input {
   font-weight: 500;
 }
 /** end blog page **/
+@media screen and (max-width: 1100px) {
+  .featured-blog-container {
+    width: 700px;
+  }
+  .blog-titles-container {
+    width: 700px;
+  }
+  .blog-container {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .featured-blog-container {
+    width: 500px;
+  }
+  .blog-titles-container {
+    width: 500px;
+  }
+  .blog-container {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .featured-blog-container {
+    width: 300px;
+  }
+  .blog-titles-container {
+    width: 300px;
+  }
+  .blog-container {
+    width: 300px;
+  }
+}
