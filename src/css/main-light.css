@@ -4,6 +4,7 @@
   --clr-bg-section-light: #c4c4b1;
   --clr-bg-blog-light: #ededf2;
   --clr-txt-light: #27282b;
+  --clr-topbanner-light: #c9c7a9;
   --clr-footer-light: #c9c7a9;
   --clr-txt-hl: #b8b9d4;
   --clr-txt-prom: #d5d5db;
@@ -89,7 +90,7 @@ input {
   grid-template-columns: 4fr 1fr;
   align-items: center;
   justify-items: center;
-  border-bottom: solid var(--clr-section-border) 2.5px;
+  background-color: var(--clr-topbanner-light)
 }
 .navbar-container {
   width: 100%;

@@ -4,6 +4,7 @@
   --clr-bg-section-dark: #030124;
   --clr-bg-blog-dark: #1d222b;
   --clr-txt-dark: #f6f7fa;
+  --clr-topbanner-dark: #121111;
   --clr-footer-dark: #121111;
   --clr-txt-hl: #b8b9d4;
   --clr-txt-prom: #d5d5db;
@@ -43,7 +44,7 @@ input {
 
 .home-page, .signup-page, .user-panel-not-logged-in-page, .email-vrfct-page, 
 .login-page, .blogs-page, .signup-logged-in, .login-logged-in-page, .blog-page {
-  min-height: calc(100vh - 80px - 100px);
+  min-height: calc(100vh - 120px - 150px);
 }
 
 /** end misc **/
@@ -84,12 +85,14 @@ input {
 /** st top-banner **/
 .top-banner {
   width: 100%;
-  height: 80px;
+  height: 120px;
   display: grid;
   grid-template-columns: 4fr 1fr;
-  align-items: center;
+  align-items: start;
   justify-items: center;
-  border-bottom: solid var(--clr-section-border) 2.5px;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: var(--clr-topbanner-dark)
 }
 .navbar-container {
   width: 100%;
@@ -103,7 +106,8 @@ input {
   justify-content: end;
 }
 .top-banner-btns-container > div {
-  margin-right: 3px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 .signup-btn.btn, .login-btn.btn {
   width: 90px;
@@ -167,7 +171,7 @@ input {
 
 /** st footer **/
 .footer {
-  height: 100px;
+  height: 150px;
   background-color: var(--clr-footer-dark);
 }
 /** end footer **/
@@ -855,7 +859,6 @@ input {
 /** st blog page **/
 .blog-container {
   width: 900px;
-  min-height: calc(100vh - 80px - 100px);
   margin: 0 auto;
   font-weight: 600;
   padding: 25px 15px;
@@ -888,7 +891,13 @@ input {
     width: 700px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 780px) {
+  .top-banner-btns-container {
+    flex-direction: column;
+    height: fit-content;
+    align-items: end;
+    justify-content: end;
+  }
   .featured-blog-container {
     width: 500px;
   }
@@ -899,7 +908,11 @@ input {
     width: 500px;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
+  .navbar span {
+    margin-right: 1rem;
+    font-weight: 600;
+  }
   .featured-blog-container {
     width: 300px;
   }
