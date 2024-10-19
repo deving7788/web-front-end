@@ -40,7 +40,7 @@ function Login() {
       const response = await fetch(request);
       if (response.ok) {
         const body = await response.json();
-        localStorage.setItem("refreshToken", body.refreshToken);
+        sessionStorage.setItem("refreshToken", body.refreshToken);
 
         updateAccountName(body.accountName);
         updateDisplayName(body.displayName);

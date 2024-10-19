@@ -8,7 +8,7 @@ async function authenticate({refreshToken, updateLoggedIn, updateAccountName, up
     if (response.ok) {
       const body = await response.json();
       if (body.refreshToken) {
-        localStorage.setItem("refreshToken", body.refreshToken);
+        sessionStorage.setItem("refreshToken", body.refreshToken);
       }
       updateLoggedIn(true);
       updateAccountName(body.accountName);

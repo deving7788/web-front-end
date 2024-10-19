@@ -31,11 +31,9 @@ function ColorTheme() {
         }
         break;
       case "to-light":
-        preferDark = window.matchMedia("(prefers-color-theme: dark)");
         linkCSS.href = "/css/main-light.css";
         break;
       case "to-dark":
-        preferDark = window.matchMedia("(prefers-color-theme: dark)");
         linkCSS.href = "/css/main-dark.css";
         break;
     }

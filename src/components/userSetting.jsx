@@ -31,7 +31,7 @@ function UserSetting() {
   let refreshToken;
 
   function handleLogout() {
-    localStorage.removeItem("refreshToken");
+    sessionStorage.removeItem("refreshToken");
     updateLoggedIn(false);
     return redirectTo("/");
   }
@@ -51,7 +51,7 @@ function UserSetting() {
       setNewDisplayNameProm(rofDisplayNameCheck);
       return;
     }
-    refreshToken = localStorage.getItem("refreshToken");
+    refreshToken = sessionStorage.getItem("refreshToken");
     const body = {displayName: newDisplayName};
     const bodyJson = JSON.stringify(body);
     const request = genPatchReqWithRefreshToken(`${gohost}/api/user/panel/change-display-name`, bodyJson, refreshToken);
@@ -94,7 +94,7 @@ function UserSetting() {
       setNewEmailProm(rofEmailCheck);
       return;
     }
-    refreshToken = localStorage.getItem("refreshToken");
+    refreshToken = sessionStorage.getItem("refreshToken");
     const body = {email: newEmail};
     const bodyJson = JSON.stringify(body);
     const request = genPatchReqWithRefreshToken(`${gohost}/api/user/panel/change-email`, bodyJson, refreshToken)
@@ -164,7 +164,7 @@ function UserSetting() {
     if (confirmPassword !== newPassword) {
       setConfirmPasswordProm("NEW_PASSWORDS_NOT_SAME");
     }
-    const refreshToken = localStorage.getItem("refreshToken");
+    const refreshToken = sessionStorage.getItem("refreshToken");
     const body = {oldPassword: currentPassword, newPassword: newPassword};
     const bodyJson = JSON.stringify(body);
     const request = genPostReqWithRefreshToken(`${gohost}/api/user/panel/change-password`, bodyJson, refreshToken);
@@ -223,7 +223,7 @@ function UserSetting() {
     }
     const body = {password: deleteAccountPassword}; 
     const bodyJson = JSON.stringify(body);
-    const refreshToken = localStorage.getItem("refreshToken");
+    const refreshToken = sessionStorage.getItem("refreshToken");
     const request = genDeleteReqWithRefreshToken(`${gohost}/api/user/panel/delete-account`, bodyJson, refreshToken);
     try {
       const response = await fetch(request);

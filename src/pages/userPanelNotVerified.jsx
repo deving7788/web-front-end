@@ -15,7 +15,7 @@ function UserPanelNotVerified() {
   
   async function sendEmailVrfct() {
     updateWaitEmailSent(true);
-    const refreshToken = localStorage.getItem("refreshToken");
+    const refreshToken = sessionStorage.getItem("refreshToken");
     const request = genGetReqWithRefreshToken(`${gohost}/api/user/email-vrfct`, refreshToken);
     try {
       const response = await fetch(request);
@@ -45,7 +45,7 @@ function UserPanelNotVerified() {
   }
   function handleLogout() {
     updateLoggedIn(false);
-    localStorage.removeItem("refreshToken");
+    sessionStorage.removeItem("refreshToken");
   }
   function handleEmailChange(e) {
     updateNewEmail(e.target.value.trim());
@@ -57,7 +57,7 @@ function UserPanelNotVerified() {
       updateNewEmailProm(rofEmailCheck);
       return;
     }
-    const refreshToken = localStorage.getItem("refreshToken");
+    const refreshToken = sessionStorage.getItem("refreshToken");
     const body = {email: newEmail};
     const bodyJson = JSON.stringify(body);
     const request = genPatchReqWithRefreshToken(`${gohost}/api/user/panel/change-email`, bodyJson, refreshToken);

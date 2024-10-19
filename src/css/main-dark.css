@@ -144,6 +144,7 @@ input {
 .themes-list-container {
   display: inline-block;
   visibility: hidden;
+  position: relative;
   width: 100%;
   height: 110px;
   font-size: 15px;
@@ -154,6 +155,7 @@ input {
 }
 .themes-list-container.show {
   visibility: visible;
+  z-index: 10;
 }
 .themes-list {
   list-style: circle;
@@ -295,10 +297,11 @@ input {
   height: 100%;
 }
 .wrong-credential-label {
-  width: fit-content;
+  width: 80%;
   display: block;
   margin: 0 auto;
   font-size: 15px;
+  font-weight: 600;
   margin-top: 20px;
 }
 .wrong-credential-label.hidden {
@@ -354,7 +357,7 @@ input {
   top: 0;
   background-color: var(--clr-bg-section-dark);
   border-radius: 6px;
-  padding: 3rem;
+  padding: 50px;
 }
 .reset-password.hidden {
   visibility: hidden;
@@ -916,6 +919,18 @@ input {
   .blog-container {
     width: 500px;
   }
+  .signup-section-container {
+    width: 420px;
+  }
+  .signup-items-container {
+    padding: 20px 15px 30px 15px;
+  }
+  .login-section-container {
+    width: 420px;
+  }
+  .reset-password-quit-btn {
+    margin-left: 320px;
+  }
 }
 @media screen and (max-width: 480px) {
   .navbar span {
@@ -927,6 +942,97 @@ input {
     align-items: start;
     padding: 10px;
     padding-bottom: 20px;
+  }
+  .signup-section-container {
+    width: 310px;
+    height: 450px;
+  }
+  .signup-items-container {
+    padding: 20px 8px 25px 8px;
+  }
+  .signup-item {
+    height: 70px;
+  }
+  .signup-item-label {
+    line-height: 25px;
+    width: 130px;
+    font-size: 10px;
+  }
+  .signup-item > div {
+    width: 320px;
+  }
+  .signup-item-input {
+    line-height: 20px;
+    font-size: 13px;
+  }
+  .signup-item-prom {
+    font-size: 11px;
+  }
+  .signup-btn-submit {
+    width: 70px;
+    height: 25px;
+    font-size: 13px;
+  }
+  .login-section-container {
+    width: 310px;
+    height: 320px;
+  }
+  .wrong-credential-label {
+    font-size: 13px;
+  }
+  .login-items-container {
+    padding: 0px 8px 30px 8px;
+  }
+  .login-item {
+    height: 70px;
+  }
+  .login-item-label {
+    line-height: 25px;
+    width: 130px;
+    font-size: 10px;
+  }
+  .login-item > div {
+    width: 320px;
+  }
+  .login-item-input {
+    line-height: 20px;
+    font-size: 13px;
+  }
+  .login-btn-submit {
+    width: 70px;
+    height: 25px;
+    font-size: 13px;
+  }
+  .reset-password-btn {
+    font-size: 10px;
+  }
+  .reset-password{
+    padding: 20px;
+  }
+  .reset-password-label {
+    font-size: 13px;
+    align-content: center;
+  }
+  .reset-password-email-prom {
+    height: 25px;
+    font-size: 13px;
+  }
+  .reset-password-input {
+    width: 250px;
+    line-height: 20px;
+    font-size: 13px;
+  }
+  .reset-password-send-btn {
+    width: 70px;
+    height: 25px;
+    font-size: 13px;
+  }
+  .reset-password-quit-btn {
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    margin-top: 65px;
+    margin-left: 250px;
   }
   .display-name-change-left-btns-container, .email-change-left-btns-container {
     width: 50px;
