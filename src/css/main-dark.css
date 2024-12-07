@@ -92,7 +92,7 @@ input {
   justify-items: center;
   padding-top: 10px;
   padding-left: 10px;
-  background-color: var(--clr-topbanner-dark)
+  background-color: var(--clr-topbanner-dark);
 }
 .navbar-container {
   width: 100%;
@@ -181,8 +181,7 @@ input {
 /** st home page **/
 .featured-blog-container {
   width: 900px;
-  margin: 0 auto;
-  margin-bottom: 20px;
+  margin: 20px auto;
   font-weight: 600;
   padding: 25px 35px;
   background-color: var(--clr-bg-blog-dark);
@@ -208,10 +207,9 @@ input {
 .signup-section-container {
   width: 500px;
   height: 500px;
-  margin: 0 auto;
+  margin: 20px auto;
   outline: var(--clr-comp-border) 2px solid;
   border-radius: 6px;
-  transform: translateY(20px);
   background-color: var(--clr-bg-section-dark);
 }
 .signup-items-container{
@@ -281,13 +279,12 @@ input {
 
 /** st login page **/
 .login-section-container {
+  position: relative;
   width: 500px;
   height: 350px;
-  margin: 0 auto;
+  margin: 20px auto;
   outline: var(--clr-comp-border) 2px solid;
-  transform: translateY(20px);
   border-radius: 6px;
-  padding-top: 1px;
   background-color: var(--clr-bg-section-dark);
 }
 .login-content {
@@ -853,25 +850,20 @@ input {
 /** st blogs page **/
 .blog-titles-container {
   width: 900px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  padding: 25px 15px;
-  margin: 0 auto;
+  margin: 20px auto;
   background-color: var(--clr-bg-blog-dark);
 }
 .blog-title {
   width: fit-content;
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 20px;
   text-transform: capitalize;
 }
 /** end blogs page **/
 /** st blog page **/
 .blog-container {
   width: 900px;
-  margin: 0 auto;
+  margin: 20px auto;
   font-weight: 600;
   padding: 25px 15px;
   background-color: var(--clr-bg-blog-dark);

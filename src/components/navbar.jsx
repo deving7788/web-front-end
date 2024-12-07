@@ -1,5 +1,5 @@
 import {Link} from "../router.jsx";
-import { navbarTitle } from "../assets/data.jsx"
+import { navbarTitle } from "../assets/asset.jsx"
 
 function Navbar() {
   return (
